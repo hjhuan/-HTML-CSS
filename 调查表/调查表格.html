@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --color-white: #f3f3f3;
+            --color-darkblue: #1b1b32;
+            --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+            --color-green: #37af65;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1em;
+            font-weight: 400;
+            line-height: 1.4;
+            color: var(--color-white);
+            margin: 0;
+        }
+
+        /* mobile friendly alternative to using background-attachment: fixed */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            background: var(--color-darkblue);
+            background-image: linear-gradient(115deg,
+                    rgba(58, 58, 158, 0.8),
+                    rgba(136, 136, 206, 0.7)),
+                url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        h1 {
+            font-weight: 400;
+            line-height: 1.2;
+        }
+
+        p {
+            font-size: 1.125em;
+            font-style: italic;
+        }
+
+        h1,
+        p {
+            margin-top: 0;
+            margin-bottom: 0.5em;
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            font-size: 1.125em;
+            margin-bottom: 0.5em;
+        }
+
+        input,
+        button,
+        select,
+        textarea {
+            margin: 0;
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+        }
+
+        button {
+            border: none;
+        }
+
+        .container {
+            width: 100%;
+            margin: 3.125em auto 0 auto;
+        }
+
+        @media (min-width: 576px) {
+            .container {
+                max-width: 540px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: 720px;
+            }
+        }
+
+        .header {
+            padding: 0 0.625em;
+            margin-bottom: 1.875em;
+        }
+
+        .description {
+            font-style: italic;
+            font-weight: 200;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+        }
+
+        .clue {
+            margin-left: 0.25em;
+            font-size: 0.9em;
+            color: #e4e4e4;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* form */
+
+        form {
+            background: var(--color-darkblue-alpha);
+            padding: 2.5em 0.625em;
+            border-radius: 0.25em;
+        }
+
+        @media (min-width: 480px) {
+            form {
+                padding: 2.5em;
+            }
+        }
+
+        .form-group {
+            margin: 0 auto 1.25em auto;
+            padding: 0.25em;
+        }
+
+        .form-control {
+            display: block;
+            width: 100%;
+            height: 2.375em;
+            padding: 0.375em 0.75em;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: 0.25em;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+
+        .form-control:focus {
+            border-color: #80bdff;
+            outline: 0;
+            box-shadow: 0 0 0 0.2em rgba(0, 123, 255, 0.25);
+        }
+
+        .input-radio,
+        .input-checkbox {
+            display: inline-block;
+            margin-right: 0.625em;
+            min-height: 1.25em;
+            min-width: 1.25em;
+        }
+
+        .input-textarea {
+            min-height: 120px;
+            width: 100%;
+            padding: 0.625em;
+            resize: vertical;
+        }
+
+        .submit-button {
+            display: block;
+            width: 100%;
+            padding: 0.75em;
+            background: var(--color-green);
+            color: inherit;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body translate="no">
+    <div class="container">
+        <header class="header">
+            <h1 id="title" class="text-center">freeCodeCamp调查表</h1>
+            <p id="desription" class="desription text-center">
+                感谢您抽出宝贵时间来帮助我们改进平台
+            </p>
+        </header>
+        <form action="survey-form">
+            <div class="form-group">
+                <label id="name-label" for="name">名称</label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="输入你的名字" required />
+            </div>
+            <div class="form-group">
+                <label id="email-label" for="email">电子邮箱</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="输入你的电子邮箱" required />
+            </div>
+            <div class="form-group">
+                <label id="number-label" for="unmber">年龄<span class="clue">（可选的）</span></label>
+                <input type="unmber" name="age" id="unmber" min="10" max="99" class="form-control" placeholder="年龄" />
+            </div>
+            <div class="form-grounp">
+                <p>哪个选项最能描述您目前的角色？</p>
+                <select name="dropdown" id="role" class="form-control" required>
+                    <option disabled selected value>选择当前角色</option>
+                    <option value="student">学生</option>
+                    <option value="job">全职工作</option>
+                    <option value="learner">全日制学习者</option>
+                    <option value="preferNo">不想说</option>
+                    <option value="other">其他</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p>您会向朋友推荐freeCodeCamp吗？
+                </p>
+                <label><input name="user-recommend" value="definitely" type="radio" class="input-radio"
+                        checked>绝对会</label>
+                <label><input name="user-recommend" value="maybe" type="radio" class="input-radio">也许</label>
+                <label><input name="user-recommend" value="not sure" type="radio" class="input-radio">不确定</label>
+            </div>
+            <div class="form-group">
+                <p>freeCodeCamp最喜欢的功能是什么？</p>
+                <select name="mostLike" id="most-like" class="form-comtrol" required>
+                    <option disabled selected value>选择一个选项</option>
+                    <option value="challenges">挑战性</option>
+                    <option value="projects">专案</option>
+                    <option value="community">社区</option>
+                    <option value="openSource">开源的</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p>您希望看到什么改进？<span class="clue">(检查所有适用)</span></p>
+                <label><input name="prefer" value="" type="checkbox" class="input-checkbox" />前端项目</label>
+                <label><input name="prefer" value="" type="checkbox" class="input-checkbox" />后段项目</label>
+                <label><input name="prefer" value="" type="checkbox" class="input-checkbox" />数据可视化</label>
+                <label><input name="prefer" value="" type="checkbox" class="input-checkbox" />挑战性</label>
+                <label><input name="prefer" value="" type="checkbox" class="input-checkbox" />开源社区</label>
+                <label><input name="prefer" value="" type="checkbox" class="input-checkbox" />吉特帮助室</label>
+                <label><input name="prefer" value="" type="checkbox" class="input-checkbox" />影片</label>
+                <label><input name="prefer" value="" type="checkbox" class="input-checkbox" />城市聚会</label>
+                <label><input name="prefer" value="" type="checkbox" class="input-checkbox" />维基</label>
+                <label><input name="prefer" value="" type="checkbox" class="input-checkbox" />论坛</label>
+                <label><input name="prefer" value="" type="checkbox" class="input-checkbox" />附加课程</label>
+            </div>
+            <div class="form-group">
+                <p>有什么意见或建议吗？</p>
+                <textarea id="comments" class="input-textarea" name="comment" placeholder="在这里输入您的评论..."></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">
+                    提交
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
