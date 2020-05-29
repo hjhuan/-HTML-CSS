@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodePen - FCC: Tribute Page</title>
+    <style>
+        html {
+            font-size: 10px;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.6rem;
+            text-align: center;
+            line-height: 1.5;
+            color: #333333;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 460px) {
+            h1 {
+                font-size: 3.5rem;
+                line-height: 1.2;
+            }
+        }
+
+        h3 {
+            font-size: 3.25rem;
+        }
+
+        a {
+            color: #477ca7;
+        }
+
+        a:valid {
+            color: #74638f;
+        }
+
+        #main {
+            margin: 30px 8px;
+            padding: 15px;
+            border-radius: 5px;
+            background: #eee;
+        }
+
+        @media (max-width: 460px) {
+            #main {
+                margin: 0;
+            }
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        #img-div {
+            background: white;
+            padding: 10px;
+            margin: 0;
+        }
+
+        #img-caption {
+            margin: 15px 0 5px 0;
+        }
+
+        @media(max-width: 460px) {
+            #img-caption {
+                font-size: 1.4rem;
+            }
+        }
+
+        #headline {
+            margin: 50px 0;
+            text-align: center;
+        }
+
+        ul {
+            margin: 0 auto 50px auto;
+            max-width: 550px;
+            text-align: left;
+            line-height: 1.6;
+        }
+
+        li {
+            margin: 16px 0;
+        }
+
+        blockquote {
+            font-style: italic;
+            max-width: 545px;
+            text-align: left;
+            margin: 0 auto 50px auto;
+        }
+    </style>
+</head>
+
+<body translate="no">
+    <main id="main">
+        <h1 id="title">诺曼·鲍洛格博士</h1>
+        <p>挽救了十亿生命的人</p>
+        <figure id="img-div">
+            <img id="image" src="https://c2.staticflickr.com/4/3689/10613180113_fdf7bcd316_b.jpg"
+                alt=" Norman Borlaug博士与一群生物学家一起站在墨西哥的麦田里">
+            <figcaption id="img-caption">
+                左边第三位的Norman Borlaug博士在墨西哥培训生物学家如何提高小麦产量——毕生抗饥饿战争的一部分。
+            </figcaption>
+        </figure>
+        <section id="tribute-info">
+            <h3 id="headline">这是Dr. Norman Borlaug博士一生的事件：</h3>
+            <ul>
+                <li><strong>1914</strong> - 生于爱荷华州的Cresco</li>
+                <li>
+                    <strong>1933</strong> - 由于他的家人，他离开了家人的农场就读明尼苏达大学。
+                    抑郁时代计划被称为“国家青年管理局“
+                </li>
+                <li>
+                    <strong>1935</strong> - 必须停学并存更多钱。在平民中工作
+                    保护团，帮助饥饿的美国人。他说：“我看到食物是如何改变它们的。” “所有这些给我留下了伤疤。”
+                </li>
+                <li>
+                    <strong>1937</strong> - 完成大学学习并在美国林业局工作
+                </li>
+                <li>
+                    <strong>1938</strong> - 与69岁的Margret Gibson结婚。由于预算削减而被解雇。
+                    受埃尔文·查尔斯·斯塔克曼（Elvin Charles Stakman）的启发，他在斯塔克曼（Stakman）的指导下回到学校学习，他向他讲解培育抗虫植物。
+                </li>
+                <li>
+                    <strong>1941</strong> - 在珍珠港袭击事件后，试图参加军队，
+                    被拒绝。取而代之的是，军方要求他的实验室研究防水胶水DDT以控制疟疾，
+                    消毒剂和其他应用科学。
+                </li>
+                <li>
+                    <strong>1942</strong> - 获得博士学位。遗传学和植物病理学
+                </li>
+                <li>
+                    <strong>1944</strong> -
+                    拒绝杜邦（Dupont）的薪水提高100％，留下他怀孕的妻子，并飞往墨西哥领导一项新的植物病理学计划。在接下来的16年中，他的团队不断繁殖6,000种不同的抗病小麦菌株-每个主要品种均包含不同的品种
+                    地球上的气候。
+                </li>
+                <li>
+                    <strong>1945</strong> - 发现一种方法，每个季节两次种植小麦，使小麦产量翻倍
+                </li>
+                <li>
+                    <strong>1953</strong> - 与矮壮实的矮矮小麦品种与高产美国小麦杂交繁殖，产生对肥料反应良好的菌株。它继续提供了墨西哥95％的小麦。
+                </li>
+                <li>
+                    <strong>1962</strong>- 访问德里，并将他的高产小麦菌株带到印度次大陆，以帮助缓解由于人口迅速增加而导致的大规模饥饿
+                </li>
+                <li>
+                    <strong>1970</strong> - 获得诺贝尔和平奖
+                </li>
+                <li>
+                    <strong>1983</strong> - 帮助七个非洲国家大幅增加玉米和高粱
+                    产量
+                </li>
+                <li>
+                    <strong>1984</strong> - 成为德克萨斯农工大学的杰出教授
+                </li>
+                <li>
+                    <strong>2005</strong> - 指出“到2050年，我们将必须使世界粮食供应翻一番。” 认为转基因作物是我们满足需求的唯一途径，因为我们用尽了耕地。说转基因作物并不是天生的危险，因为“我们已经对植物进行了基因改造，动物很久了。在我们称之为科学之前很久，人们就在选择最好的品种。”
+                </li>
+                <li>
+                    <strong>2009</strong> - 逝世，享年95岁。
+                </li>
+            </ul>
+            <blockquote
+                cite="http://news.rediff.com/report/2009/sep/14/pm-pays-tribute-to-father-of-green-revolution-borlaug.htm">
+                <p>
+                    “Borlaug博士的一生和成就证明了一个人的深远贡献智慧，毅力和科学远见可以促进人类的和平与进步。”
+                </p>
+                <cite>-- 印度总理曼莫汉·辛格</cite>
+            </blockquote>
+            <h3>
+                如果有时间，您应该在他的书上更多地了解这个不可思议的人
+                <a id="tribute-link" href="https://en.wikipedia.org/wiki/Norman_Borlaug" target="_blank"> Wikipedia
+                    entry</a>.
+            </h3>
+        </section>
+    </main>
+
+</body>
+
+</html>
